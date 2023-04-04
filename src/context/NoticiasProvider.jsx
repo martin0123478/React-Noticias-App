@@ -11,7 +11,7 @@ const NoticiasProvider = ({children}) =>{
         const consultarApi = async() =>{
                try {
                  const url = `https://newsapi.org/v2/top-headlines?country=mx&category=${categoria}&apiKey=${import.meta.env.VITE_API_KEY}`
-        console.log(url)
+        
         const {data} = await axios(url)
         setNoticias(data.articles)
                } catch (error) {
@@ -28,7 +28,8 @@ const NoticiasProvider = ({children}) =>{
         <NoticiasContext.Provider
         value={{
             categoria,
-            handleCategoria
+            handleCategoria,
+            noticias
         }}>
             {children}
         </NoticiasContext.Provider>
