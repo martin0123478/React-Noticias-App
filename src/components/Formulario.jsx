@@ -30,14 +30,7 @@ const Formulario = () => {
             )}
 
         </Select>
-            <Box sx={{marginTop:2}}>
-                <Button
-                fullWidth
-                variant='contained'
-                color='primary'>
-            Buscar Noticias
-        </Button>
-             </Box>
+            
         
     </FormControl>
    </form>
